@@ -1,0 +1,34 @@
+{
+  "name": "sante-naturel-windows",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Application Windows pour Santé & Naturel",
+  "main": "main.cjs",
+  "scripts": {
+    "dist": "electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "^36.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.santeetnaturel.app",
+    "productName": "Sante et Naturel",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.cjs"
+    ],
+    "extraResources": [
+      {
+        "from": "../facebook_naturel/logo_sante_naturel.ico",
+        "to": "logo_sante_naturel.ico"
+      }
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "../facebook_naturel/logo_sante_naturel.ico"
+    }
+  }
+}

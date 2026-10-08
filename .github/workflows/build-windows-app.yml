@@ -1,0 +1,38 @@
+name: Build Windows app
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "windows_app/**"
+      - "facebook_naturel/logo_sante_naturel.ico"
+      - ".github/workflows/build-windows-app.yml"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+        working-directory: windows_app
+
+      - name: Build portable Windows app
+        run: npm run dist
+        working-directory: windows_app
+
+      - name: Upload Windows executable
+        uses: actions/upload-artifact@v4
+        with:
+          name: sante-et-naturel-windows
+          path: windows_app/dist/*.exe
+          if-no-files-found: error
