@@ -1,18 +1,20 @@
 import os
 import base64
 import streamlit as st
+from PIL import Image
+
+DOSSIER_APP = os.path.dirname(os.path.abspath(__file__))
 
 # 1. Configuration de la page
 st.set_page_config(
     page_title="Santé & Naturel",
-    page_icon="🌿",
+    page_icon=Image.open(os.path.join(DOSSIER_APP, "Logo sante & naturel.png")),
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
 NUMERO_WHATSAPP = "221772702493"
 LIEN_FACEBOOK = "https://facebook.com"
-DOSSIER_APP = os.path.dirname(os.path.abspath(__file__))
 
 
 def chemin_image(nom):
