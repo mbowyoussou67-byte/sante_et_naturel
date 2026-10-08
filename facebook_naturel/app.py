@@ -20,7 +20,7 @@ def get_image_base64(path):
             return base64.b64encode(image_file.read()).decode('utf-8')
     return ""
 
-logo_base64 = get_image_base64("Logo sante & naturel.png")
+logo_base64 = get_image_base64("facebook_naturel/⁠Logo sante & naturel.png")
 logo_html_src = f"data:image/png;base64,{logo_base64}" if logo_base64 else ""
 
 # 2. Styles CSS Personnalisés & Animations
@@ -273,7 +273,7 @@ PRODUITS = [
         "nom": "Forever Aloe Berry Nectar",
         "categorie": "Boissons & Vitalité",
         "desc": "Bénéfique pour les règles douloureuses, le nettoyage des voies urinaires, l'équilibre hormonal et la prévention des infections.",
-        "image": "ALEO BERRY NECTAR.jpeg",
+        "image": "facebook_naturel/⁠ALEO BERRY NECTAR.jpeg",
         "disponible": True
     },
     {
@@ -281,7 +281,7 @@ PRODUITS = [
         "nom": "Forever Bee Pollen",
         "categorie": "Compléments Alimentaires",
         "desc": "Riche en vitamines et minéraux. Idéal en cas de fatigue, stimule l'appétit, la vitalité et les défenses naturelles.",
-        "image": "FOREVER BEE POLLEN.jpeg",
+        "image": "facebook_naturel/⁠FOREVER BEE POLLEN.jpeg",
         "disponible": True
     },
     {
@@ -289,7 +289,7 @@ PRODUITS = [
         "nom": "Forever Bee Propolis",
         "categorie": "Compléments Alimentaires",
         "desc": "Puissant antioxydant et antibiotique naturel. Stimule la production d'anticorps et renforce le système immunitaire.",
-        "image": "FOREVER BEE PROPOLIS.jpeg",
+        "image": "facebook_naturel/⁠FOREVER BEE PROPOLIS.jpeg",
         "disponible": True
     },
     {
@@ -297,7 +297,7 @@ PRODUITS = [
         "nom": "Forever Ail & Thym",
         "categorie": "Compléments Alimentaires",
         "desc": "Antibiotique naturel favorisant le confort digestif, la circulation sanguine et la régulation de la pression artérielle.",
-        "image": "FOREVER AIL & THYM.jpeg",
+        "image": "facebook_naturel/⁠FOREVER AIL & THYM.jpeg",
         "disponible": True
     },
     {
@@ -305,7 +305,7 @@ PRODUITS = [
         "nom": "Forever Calcium",
         "categorie": "Compléments Alimentaires",
         "desc": "Formule complète associant Calcium, Magnésium, Vitamines C & D pour préserver le capital osseux et musculaire.",
-        "image": "FOREVER CALCIUM.jpeg",
+        "image": "facebook_naturel/⁠FOREVER CALCIUM.jpeg",
         "disponible": True
     },
     {
@@ -313,7 +313,7 @@ PRODUITS = [
         "nom": "Vitolize Hommes",
         "categorie": "Santé Homme",
         "desc": "Soutient le bon fonctionnement de la prostate, la fertilité et le maintien du taux naturel de testostérone.",
-        "image": "VITOLIZ HOMME.jpeg",
+        "image": "facebook_naturel/⁠VITOLIZ HOMME.jpeg",
         "disponible": True
     },
     {
@@ -321,7 +321,7 @@ PRODUITS = [
         "nom": "Forever Lycium Plus",
         "categorie": "Compléments Alimentaires",
         "desc": "Riche en antioxydants, combat le vieillissement cellulaire, purifie le foie et soutient la vision.",
-        "image": "FOEVER LYCIUM PLUS.jpeg",
+        "image": "facebook_naturel/⁠FOEVER LYCIUM PLUS.jpeg",
         "disponible": True
     },
     {
@@ -329,7 +329,7 @@ PRODUITS = [
         "nom": "Forever Multi-Maca",
         "categorie": "Vitalité & Énergie",
         "desc": "Stimule la libido, augmente les performances physiques et intellectuelles, et rééquilibre les hormones.",
-        "image": "FOREVER MULTI-MACA.jpeg",
+        "image": "facebook_naturel/⁠FOREVER MULTI-MACA.jpeg",
         "disponible": True
     },
     {
@@ -337,7 +337,7 @@ PRODUITS = [
         "nom": "Forever Absorbent-C",
         "categorie": "Compléments Alimentaires",
         "desc": "Puissant antioxydant à la vitamine C liée au son d'avoine pour une absorption maximale par l'organisme.",
-        "image": "ABSORBANT C.jpeg",
+        "image": "facebook_naturel/⁠ABSORBANT C.jpeg",
         "disponible": True
     },
     {
@@ -345,7 +345,7 @@ PRODUITS = [
         "nom": "Arc Forever",
         "categorie": "Boissons & Vitalité",
         "desc": "Soutien synergique complet pour la vitalité globale et le bon fonctionnement cardiovasculaire.",
-        "image": "arc forever.jpeg",
+        "image": "facebook_naturel/⁠arc forever.jpeg",
         "disponible": False
     }
 ]
