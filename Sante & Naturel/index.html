@@ -56,7 +56,17 @@
     </style>
 </head>
 <body data-page="accueil" class="bg-sky-50 text-slate-800 font-sans">
-
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<script type="module">
+  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+  createChat({
+    webhookUrl: 'https://sante-et-naturel9.app.n8n.cloud/webhook/0fa6640c-52ca-4fb7-ad54-f39c557c4866/chat',
+    mode: 'window',
+    initialMessages: ['Bonjour ! Bienvenue chez Santé & Naturel. Comment puis-je vous aider ?'],
+    i18n: { en: { title: 'Santé & Naturel', subtitle: 'Posez-moi vos questions', footer: '', getStarted: 'Nouvelle conversation', inputPlaceholder: 'Écrivez votre message...' } },
+    defaultLanguage: 'en'
+  });
+</script>
     <header data-site-header></header>
 
     <!-- Section d'Accueil (Hero) -->
