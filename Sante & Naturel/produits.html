@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#087e9b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Santé & Naturel">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <meta name="description" content="Découvrez les catégories de produits proposées par Santé & Naturel : nutrition, boissons à l'aloe vera et soins.">
+    <title>Nos produits | Santé & Naturel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { snGreen: '#087e9b', snLightGreen: '#0ea5c6', snDark: '#102b43' }, fontFamily: { sans: ['Poppins', 'sans-serif'] } } } };</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="site.css?v=20261015-update-notification">
+    <link rel="stylesheet" href="site-update-notice-v18.css">
+    <script src="site.js?v=20261015-update-notification" defer></script>
+    <script src="site-update-notice-v18.js" defer></script>
+    <script src="catalogue.js" defer></script>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<script type="module">
+  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+  createChat({
+    webhookUrl: 'https://sante-et-naturel9.app.n8n.cloud/webhook/0fa6640c-52ca-4fb7-ad54-f39c557c4866/chat',
+    mode: 'window',
+    initialMessages: ['Bonjour ! Bienvenue chez Santé & Naturel. Comment puis-je vous aider ?'],
+    i18n: { en: { title: 'Santé & Naturel', subtitle: 'Posez-moi vos questions', footer: '', getStarted: 'Nouvelle conversation', inputPlaceholder: 'Écrivez votre message...' } },
+    defaultLanguage: 'en'
+  });
+</script>
+<body data-page="produits" class="font-sans text-slate-800">
+    <header data-site-header></header>
+    <main>
+        <section class="ice-hero px-4 py-16 sm:px-6 lg:py-20">
+            <div class="mx-auto max-w-7xl">
+                <p class="font-semibold uppercase tracking-[0.16em] text-snGreen">Nos produits</p>
+                <h1 class="mt-3 max-w-3xl text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">Des essentiels pour votre routine bien-être</h1>
+                <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-600">Parcourez les différentes catégories de notre sélection Forever Living et trouvez facilement les produits qui vous intéressent.</p>
+            </div>
+        </section>
+        <section id="product-list" class="anchor-section px-4 py-14 sm:px-6 lg:py-20">
+            <div class="mx-auto mb-9 max-w-7xl rounded-3xl border border-sky-100 bg-white p-5 shadow-sm sm:p-7">
+                <div class="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+                    <div>
+                        <h2 class="text-lg font-bold text-slate-900">Tous nos produits</h2>
+                        <p class="mt-1 text-sm text-slate-600">Parcourez les photos, les informations et la disponibilité de chaque produit.</p>
+                        <p id="stock-data-status" class="mt-2 text-sm text-slate-600" role="status" aria-live="polite"></p>
+                    </div>
+                    <div class="grid gap-4 sm:grid-cols-2 lg:w-[34rem]">
+                        <div>
+                            <label for="product-search" class="mb-2 block text-sm font-semibold text-slate-700">Rechercher</label>
+                            <input id="product-search" type="search" autocomplete="off" placeholder="Produit, ingrédient, bienfait…" aria-describedby="search-results" class="w-full rounded-xl border border-sky-200 bg-sky-50/50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-snGreen focus:ring-2 focus:ring-cyan-100">
+                        </div>
+                        <div>
+                            <label for="stock-filter" class="mb-2 block text-sm font-semibold text-slate-700">Disponibilité</label>
+                            <select id="stock-filter" class="w-full rounded-xl border border-sky-200 bg-sky-50/50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-snGreen focus:ring-2 focus:ring-cyan-100">
+                                <option value="all">Tous les produits</option>
+                                <option value="available">Disponibles</option>
+                                <option value="unavailable">Indisponibles</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <p id="search-results" class="mt-4 text-sm text-slate-600" role="status" aria-live="polite"></p>
+            </div>
+            <div id="product-categories" class="mx-auto max-w-7xl space-y-14"></div>
+        </section>
+    </main>
+    <footer data-site-footer></footer>
+</body>
+</html>

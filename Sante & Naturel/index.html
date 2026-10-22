@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="google-site-verification" content="XYZ123..." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#087e9b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Santé & Naturel">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <meta name="description" content="Découvrez la boutique Santé & Naturel de Youssou Mbow à Dakar : produits Forever Living, catalogue et commandes directes sur WhatsApp.">
+    <title>Santé & Naturel | Youssou Mbow</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="site.css?v=20261015-update-notification">
+    <link rel="stylesheet" href="site-update-notice-v18.css">
+    <script src="site.js?v=20261015-update-notification" defer></script>
+    <script src="site-update-notice-v18.js" defer></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        snGreen: '#087e9b',
+                        snLightGreen: '#0ea5c6',
+                        snDark: '#102b43'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+        body { background: #f4fbff; }
+        .ice-hero {
+            background:
+                radial-gradient(circle at 78% 18%, rgba(255, 255, 255, 0.92), transparent 26rem),
+                linear-gradient(125deg, #e7f8ff 0%, #f5fbff 48%, #d9f2fb 100%);
+        }
+        .ice-panel { background: rgba(255, 255, 255, 0.74); backdrop-filter: blur(18px); }
+        .ice-card { box-shadow: 0 18px 55px rgba(18, 74, 101, 0.08); }
+        .anchor-section { scroll-margin-top: 6rem; }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { transition-duration: 0.01ms !important; }
+        }
+    </style>
+</head>
+<body data-page="accueil" class="bg-sky-50 text-slate-800 font-sans">
+
+    <header data-site-header></header>
+
+    <!-- Section d'Accueil (Hero) -->
+    <section id="accueil" class="anchor-section ice-hero relative overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:py-28">
+        <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+            <div class="relative z-10 max-w-2xl">
+                <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/75 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-snGreen shadow-sm">
+                    <span class="h-2 w-2 rounded-full bg-cyan-500"></span>
+                    Boutique bien-être · Médina, Dakar
+                </div>
+                <h1 class="text-4xl font-bold leading-[1.12] tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+                    Le bien-être au naturel,<br><span class="text-snGreen">à portée de main.</span>
+                </h1>
+                <p class="mt-6 max-w-xl text-base leading-7 text-slate-600 sm:text-lg">
+                    Découvrez une sélection de produits Forever Living pour prendre soin de vous au quotidien. Parcourez la boutique et commandez facilement sur WhatsApp.
+                </p>
+                <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+                    <a href="catalogue.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-snGreen px-7 py-3.5 font-semibold text-white shadow-lg shadow-cyan-900/15 transition hover:-translate-y-0.5 hover:bg-snLightGreen">
+                        Découvrir le catalogue <i class="fas fa-arrow-right text-sm"></i>
+                    </a>
+                    <a href="boutique.html" class="inline-flex items-center justify-center rounded-full border border-sky-200 bg-white/80 px-7 py-3.5 font-semibold text-slate-700 transition hover:bg-white">
+                        Explorer la boutique
+                    </a>
+                </div>
+                <div class="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium text-slate-600">
+                    <span><i class="fas fa-snowflake mr-2 text-snGreen"></i>Sélection bien-être</span>
+                    <span><i class="fab fa-whatsapp mr-2 text-snGreen"></i>Commande directe</span>
+                    <span><i class="fas fa-map-marker-alt mr-2 text-snGreen"></i>Dakar, Sénégal</span>
+                </div>
+            </div>
+
+            <div class="relative mx-auto w-full max-w-xl">
+                <div class="absolute -left-8 top-8 h-40 w-40 rounded-full bg-cyan-200/60 blur-3xl"></div>
+                <div class="absolute -bottom-8 right-0 h-48 w-48 rounded-full bg-sky-300/50 blur-3xl"></div>
+                <div class="ice-panel ice-card relative overflow-hidden rounded-[2rem] border border-white p-4 sm:p-6">
+                    <div class="flex items-center justify-start gap-3 px-2 pb-3">
+                        <div class="home-floating-logo" aria-label="Logo de Santé & Naturel">
+                            <div class="home-floating-logo-inner">
+                                <img src="sante-naturel-logo.jpg" alt="Logo Santé &amp; Naturel">
+                            </div>
+                        </div>
+                        <div class="min-w-0">
+                            <p class="text-sm font-semibold text-slate-700">La sélection du moment</p>
+                            <span class="mt-2 inline-flex rounded-full bg-cyan-50 px-3 py-1 text-xs font-semibold text-snGreen">Forever Living</span>
+                        </div>
+                    </div>
+                    <div class="flex h-64 items-center justify-center overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-white to-sky-100 sm:h-80">
+                        <img src="boissons-aloe-forever.png" alt="Sélection de boissons Forever à l'aloe vera" class="h-full w-full object-contain p-3">
+                    </div>
+                    <div class="flex items-center justify-between gap-4 px-2 pt-5">
+                        <div>
+                            <p class="font-bold text-slate-900">Une routine fraîche et naturelle</p>
+                            <p class="mt-1 text-sm text-slate-500">Explorez les produits de la boutique</p>
+                        </div>
+                        <a href="produits.html" class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-snGreen shadow-md transition hover:bg-snGreen hover:text-white" aria-label="Voir les produits">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="boutique" class="anchor-section bg-white px-4 py-16 sm:px-6 lg:py-20">
+        <div class="mx-auto max-w-7xl">
+            <div class="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-[0.16em] text-snGreen">Bienvenue chez Santé & Naturel</p>
+                    <h2 class="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Une boutique pensée pour vous</h2>
+                </div>
+                <a href="catalogue.html" class="inline-flex items-center gap-2 font-semibold text-snGreen transition hover:gap-3">Parcourir le catalogue <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="grid gap-5 md:grid-cols-3">
+                <a href="produits.html" class="ice-card group rounded-3xl border border-sky-100 bg-gradient-to-br from-sky-50 to-white p-6 transition hover:-translate-y-1 hover:border-sky-200">
+                    <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-snGreen shadow-sm"><i class="fas fa-leaf text-lg"></i></span>
+                    <h3 class="mt-5 text-lg font-bold text-slate-900">Bien-être & nutrition</h3>
+                    <p class="mt-2 text-sm leading-6 text-slate-600">Découvrez les compléments et produits de la ruche de notre sélection.</p>
+                    <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-snGreen">Voir la sélection <i class="fas fa-arrow-right transition group-hover:translate-x-1"></i></span>
+                </a>
+                <a href="produits.html" class="ice-card group rounded-3xl border border-sky-100 bg-gradient-to-br from-cyan-50 to-white p-6 transition hover:-translate-y-1 hover:border-sky-200">
+                    <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-snGreen shadow-sm"><i class="fas fa-spa text-lg"></i></span>
+                    <h3 class="mt-5 text-lg font-bold text-slate-900">Soins & beauté</h3>
+                    <p class="mt-2 text-sm leading-6 text-slate-600">Une sélection de soins à l'aloe vera pour votre routine quotidienne.</p>
+                    <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-snGreen">Voir la sélection <i class="fas fa-arrow-right transition group-hover:translate-x-1"></i></span>
+                </a>
+                <a href="contact.html" class="ice-card group rounded-3xl border border-sky-100 bg-gradient-to-br from-blue-50 to-white p-6 transition hover:-translate-y-1 hover:border-sky-200">
+                    <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-snGreen shadow-sm"><i class="fab fa-whatsapp text-xl"></i></span>
+                    <h3 class="mt-5 text-lg font-bold text-slate-900">Conseil & commande</h3>
+                    <p class="mt-2 text-sm leading-6 text-slate-600">Contactez Youssou Mbow pour vos questions et commandes à Dakar.</p>
+                    <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-snGreen">Nous contacter <i class="fas fa-arrow-right transition group-hover:translate-x-1"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalogue de la boutique -->
+    <section id="catalogue" class="anchor-section bg-sky-50 px-4 py-16 sm:px-6 lg:py-20">
+        <div class="mx-auto max-w-7xl">
+            <div class="text-center mb-16 space-y-3">
+                <p class="text-sm font-semibold uppercase tracking-[0.16em] text-snGreen">La boutique en ligne</p>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Catalogue Forever Living</h2>
+                <p class="text-gray-600 max-w-xl mx-auto">Découvrez les bienfaits de nos produits.</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto mb-8">
+                <label for="product-search" class="block text-sm font-semibold text-gray-800 mb-2">Rechercher un produit ou un bienfait</label>
+                <input id="product-search" type="search" autocomplete="off"
+                       placeholder="Ex. Aloe, vitamine C, peau, os…"
+                       aria-describedby="search-results"
+                       class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 shadow-sm focus:border-snGreen focus:outline-none focus:ring-2 focus:ring-snGreen">
+                <div class="mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                    <label for="stock-filter" class="text-sm font-semibold text-gray-800">Afficher les produits</label>
+                    <select id="stock-filter" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 focus:border-snGreen focus:outline-none focus:ring-2 focus:ring-snGreen">
+                        <option value="all">Tous les produits</option>
+                        <option value="available">Disponibles</option>
+                        <option value="unavailable">Indisponibles</option>
+                    </select>
+                </div>
+                <p id="stock-data-status" class="mt-3 text-sm text-gray-700" role="status" aria-live="polite"></p>
+                <p id="search-results" class="mt-3 text-sm text-gray-700" role="status" aria-live="polite"></p>
+            </div>
+
+            <!-- Grille de Produits -->
+            <div id="produits" class="anchor-section grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+                <!-- 1. ABSORBENT C -->
+                <div data-product-card data-search="absorbent c vitamine c immunite fatigue collagene vitamine" class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 flex flex-col hover:shadow-xl transition">
+                    <div class="p-4 bg-white flex justify-center items-center border-b border-gray-50">
+                        <img src="ABSORBANT C.jpeg" alt="Absorbent C" class="h-64 object-contain">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">ABSORBENT C</h3>
+                            <ul class="text-xs text-gray-600 space-y-1.5 list-disc list-inside">
+                                <li>La vitamine C contribue au fonctionnement normal du système immunitaire.</li>
+                                <li>Elle contribue à réduire la fatigue et à la formation normale de collagène.</li>
+                                <li>Elle participe au métabolisme énergétique normal.</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/221772702493?text=Bonjour%20Sant%C3%A9%20%26%20Naturel,%20je%20souhaite%20des%20informations%20ou%20commander%20Absorbent%20C" target="_blank" class="w-full bg-snGreen hover:bg-snLightGreen text-white text-center font-bold py-3 rounded-xl flex items-center justify-center space-x-2 transition">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span>Commander sur WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. FOREVER CALCIUM -->
+                <div data-product-card data-search="forever calcium calcium magnesium vitamine c vitamine d zinc os dentition muscles" class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 flex flex-col hover:shadow-xl transition">
+                    <div class="p-4 bg-white flex justify-center items-center border-b border-gray-50">
+                        <img src="FOREVER CALCIUM.jpeg" alt="Forever Calcium" class="h-64 object-contain">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">FOREVER CALCIUM</h3>
+                            <ul class="text-xs text-gray-600 space-y-1.5 list-disc list-inside">
+                                <li>Le calcium et la vitamine D contribuent au maintien d'une ossature normale.</li>
+                                <li>Le calcium contribue au maintien d'une dentition normale.</li>
+                                <li>Le calcium contribue au fonctionnement normal des muscles.</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/221772702493?text=Bonjour%20Sant%C3%A9%20%26%20Naturel,%20je%20souhaite%20des%20informations%20ou%20commander%20Forever%20Calcium" target="_blank" class="w-full bg-snGreen hover:bg-snLightGreen text-white text-center font-bold py-3 rounded-xl flex items-center justify-center space-x-2 transition">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span>Commander sur WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. FOREVER BEE POLLEN -->
+                <div data-product-card data-search="bee pollen pollen abeille nutriments vitalite" class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 flex flex-col hover:shadow-xl transition">
+                    <div class="p-4 bg-white flex justify-center items-center border-b border-gray-50">
+                        <img src="FOREVER BEE POLLEN.jpeg" alt="Forever Bee Pollen" class="h-64 object-contain">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">BEE POLLEN</h3>
+                            <ul class="text-xs text-gray-600 space-y-1.5 list-disc list-inside">
+                                <li>Apporte des nutriments naturellement présents dans le pollen d'abeille.</li>
+                                <li>Contribue à la vitalité au quotidien.</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/221772702493?text=Bonjour%20Sant%C3%A9%20%26%20Naturel,%20je%20souhaite%20des%20informations%20ou%20commander%20Forever%20Bee%20Pollen" target="_blank" class="w-full bg-snGreen hover:bg-snLightGreen text-white text-center font-bold py-3 rounded-xl flex items-center justify-center space-x-2 transition">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span>Commander sur WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. ALOE BERRY NECTAR -->
+                <div data-product-card data-search="aloe berry nectar boisson aloe vera canneberge pomme" class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 flex flex-col hover:shadow-xl transition">
+                    <div class="p-4 bg-white flex justify-center items-center border-b border-gray-50">
+                        <img src="ALEO BERRY NECTAR.jpeg" alt="Aloe Berry Nectar" class="h-64 object-contain">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-xl font-bold text-gray-900">ALOE BERRY NECTAR</h3>
+                            </div>
+                            <ul class="text-xs text-gray-600 space-y-1.5 list-disc list-inside">
+                                <li>Contribue à varier l'hydratation quotidienne.</li>
+                                <li>Sa saveur fruitée rend l'hydratation quotidienne plus agréable.</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/221772702493?text=Bonjour%20Sant%C3%A9%20%26%20Naturel,%20je%20souhaite%20des%20informations%20ou%20commander%20Aloe%20Berry%20Nectar" target="_blank" class="w-full bg-snGreen hover:bg-snLightGreen text-white text-center font-bold py-3 rounded-xl flex items-center justify-center space-x-2 transition">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span>Commander sur WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 5. SOINS À L'ALOE VERA -->
+                <div data-product-card data-search="soins aloe vera aloe first gelly propolis creme peau rafraichit apaise hydrate confort cutane nourrit adoucit" class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 flex flex-col hover:shadow-xl transition">
+                    <div class="p-4 bg-white flex justify-center items-center border-b border-gray-50">
+                        <img src="aloe-soins-forever.png" alt="Aloe First, Aloe Vera Gelly et Aloe Propolis Creme" class="h-64 object-contain">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">SOINS À L'ALOE VERA</h3>
+                            <ul class="text-xs text-gray-600 space-y-1.5 list-disc list-inside">
+                                <li>Aloe First rafraîchit et apaise la peau.</li>
+                                <li>Aloe Vera Gelly hydrate et procure une sensation de confort cutané.</li>
+                                <li>Aloe Propolis Creme nourrit et adoucit la peau.</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/221772702493?text=Bonjour%20Sant%C3%A9%20%26%20Naturel,%20je%20souhaite%20des%20informations%20ou%20commander%20les%20soins%20%C3%A0%20l%27aloe%20vera" target="_blank" class="w-full bg-snGreen hover:bg-snLightGreen text-white text-center font-bold py-3 rounded-xl flex items-center justify-center space-x-2 transition">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span>Commander sur WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 6. ALOE VERA GEL -->
+                <div data-product-card data-search="aloe vera gel boisson aloe hydratation rafraichissant bien-etre" class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 flex flex-col hover:shadow-xl transition">
+                    <div class="p-4 bg-white flex justify-center items-center border-b border-gray-50">
+                        <img src="aloe-vera-gel-forever.png" alt="Forever Aloe Vera Gel" class="h-64 object-contain">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">ALOE VERA GEL</h3>
+                            <ul class="text-xs text-gray-600 space-y-1.5 list-disc list-inside">
+                                <li>Boisson à l'aloe vera au goût doux et rafraîchissant.</li>
+                                <li>Contribue à l'hydratation quotidienne.</li>
+                                <li>S'intègre facilement à une routine de bien-être.</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/221772702493?text=Bonjour%20Sant%C3%A9%20%26%20Naturel,%20je%20souhaite%20des%20informations%20ou%20commander%20Aloe%20Vera%20Gel" target="_blank" class="w-full bg-snGreen hover:bg-snLightGreen text-white text-center font-bold py-3 rounded-xl flex items-center justify-center space-x-2 transition">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span>Commander sur WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 7. KIT VISAGE ALOE -->
+                <div data-product-card data-search="kit visage aloe gelly propolis creme savon avocado peau nettoie hydrate fraicheur nourrit adoucit" class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 flex flex-col hover:shadow-xl transition">
+                    <div class="p-4 bg-white flex justify-center items-center border-b border-gray-50">
+                        <img src="kit-visage-aloe-forever.jpeg" alt="Kit visage Forever avec Aloe Vera Gelly, Aloe Propolis Creme et savon Aloe Avocado" class="h-64 object-contain">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">KIT VISAGE À L'ALOE</h3>
+                            <ul class="text-xs text-gray-600 space-y-1.5 list-disc list-inside">
+                                <li>Nettoie la peau en douceur avec le savon Aloe Avocado.</li>
+                                <li>Aloe Vera Gelly hydrate et procure une sensation de fraîcheur.</li>
+                                <li>Aloe Propolis Creme nourrit et adoucit la peau.</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/221772702493?text=Bonjour%20Sant%C3%A9%20%26%20Naturel,%20je%20souhaite%20des%20informations%20ou%20commander%20le%20kit%20visage%20%C3%A0%20l%27aloe" target="_blank" class="w-full bg-snGreen hover:bg-snLightGreen text-white text-center font-bold py-3 rounded-xl flex items-center justify-center space-x-2 transition">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span>Commander sur WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 8. BOISSONS À L'ALOE VERA -->
+                <div data-product-card data-search="boissons aloe vera mango berry nectar gel peaches boisson hydratation fraicheur" class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 flex flex-col hover:shadow-xl transition">
+                    <div class="p-4 bg-white flex justify-center items-center border-b border-gray-50">
+                        <img src="boissons-aloe-forever.png" alt="Gamme de boissons Forever Aloe Mango, Aloe Berry Nectar, Aloe Vera Gel et Aloe Peaches" class="h-64 object-contain">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">BOISSONS À L'ALOE VERA</h3>
+                            <ul class="text-xs text-gray-600 space-y-1.5 list-disc list-inside">
+                                <li>Des saveurs fruitées pour varier l'hydratation au quotidien.</li>
+                                <li>Une boisson fraîche et agréable à intégrer à la routine quotidienne.</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/221772702493?text=Bonjour%20Sant%C3%A9%20%26%20Naturel,%20je%20souhaite%20des%20informations%20sur%20les%20boissons%20%C3%A0%20l%27aloe%20vera" target="_blank" class="w-full bg-snGreen hover:bg-snLightGreen text-white text-center font-bold py-3 rounded-xl flex items-center justify-center space-x-2 transition">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span>Commander sur WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 9. FOREVER MULTI-MACA -->
+                <div data-product-card data-search="multi maca maca vitalite energie tonus" class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 flex flex-col hover:shadow-xl transition">
+                    <div class="p-4 bg-white flex justify-center items-center border-b border-gray-50">
+                        <img src="FOREVER MULTI-MACA.jpeg" alt="Forever Multi-Maca" class="h-64 object-contain">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">MULTI-MACA</h3>
+                            <ul class="text-xs text-gray-600 space-y-1.5 list-disc list-inside">
+                                <li>La maca est traditionnellement appréciée pour accompagner la vitalité.</li>
+                                <li>S'intègre à une routine quotidienne axée sur le tonus et le bien-être.</li>
+                                <li>Convient aux routines bien-être des hommes et des femmes.</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/221772702493?text=Bonjour%20Sant%C3%A9%20%26%20Naturel,%20je%20souhaite%20des%20informations%20ou%20commander%20Multi-Maca" target="_blank" class="w-full bg-snGreen hover:bg-snLightGreen text-white text-center font-bold py-3 rounded-xl flex items-center justify-center space-x-2 transition">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span>Commander sur WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 10. FOREVER BEE PROPOLIS -->
+                <div data-product-card data-search="bee propolis propolis ruche abeille antioxydant immunite defenses naturelles" class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 flex flex-col hover:shadow-xl transition">
+                    <div class="p-4 bg-white flex justify-center items-center border-b border-gray-50">
+                        <img src="FOREVER BEE PROPOLIS.jpeg" alt="Forever Bee Propolis" class="h-64 object-contain">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">BEE PROPOLIS</h3>
+                            <ul class="text-xs text-gray-600 space-y-1.5 list-disc list-inside">
+                                <li>La propolis est appréciée pour ses propriétés antioxydantes.</li>
+                                <li>Contribue au maintien des défenses naturelles.</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/221772702493?text=Bonjour%20Sant%C3%A9%20%26%20Naturel,%20je%20souhaite%20des%20informations%20ou%20commander%20Bee%20Propolis" target="_blank" class="w-full bg-snGreen hover:bg-snLightGreen text-white text-center font-bold py-3 rounded-xl flex items-center justify-center space-x-2 transition">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span>Commander sur WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 11. FOREVER LYCIUM PLUS -->
+                <div data-product-card data-search="lycium plus goji lycium reglisse antioxydants vitalite stress oxydatif cellules" class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 flex flex-col hover:shadow-xl transition">
+                    <div class="p-4 bg-white flex justify-center items-center border-b border-gray-50">
+                        <img src="FOEVER LYCIUM PLUS.jpeg" alt="Forever Lycium Plus" class="h-64 object-contain">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">LYCIUM PLUS</h3>
+                            <ul class="text-xs text-gray-600 space-y-1.5 list-disc list-inside">
+                                <li>Les baies de goji sont naturellement riches en composés antioxydants.</li>
+                                <li>Les composés antioxydants du goji contribuent à protéger les cellules du stress oxydatif.</li>
+                                <li>Accompagne une routine quotidienne axée sur la vitalité.</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/221772702493?text=Bonjour%20Sant%C3%A9%20%26%20Naturel,%20je%20souhaite%20des%20informations%20ou%20commander%20Lycium%20Plus" target="_blank" class="w-full bg-snGreen hover:bg-snLightGreen text-white text-center font-bold py-3 rounded-xl flex items-center justify-center space-x-2 transition">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span>Commander sur WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 12. FOREVER AIL & THYM -->
+                <div data-product-card data-search="ail thym ail et thym digestion vitalite confort digestif bien-etre cardiovasculaire" class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 flex flex-col hover:shadow-xl transition">
+                    <div class="p-4 bg-white flex justify-center items-center border-b border-gray-50">
+                        <img src="FOREVER AIL & THYM.jpeg" alt="Forever Ail et Thym" class="h-64 object-contain">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">AIL & THYM</h3>
+                            <ul class="text-xs text-gray-600 space-y-1.5 list-disc list-inside">
+                                <li>Le thym est traditionnellement apprécié pour accompagner le confort digestif.</li>
+                                <li>L'ail contribue à une routine alimentaire axée sur le bien-être cardiovasculaire.</li>
+                                <li>La formule associe les bienfaits traditionnels de l'ail et du thym.</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/221772702493?text=Bonjour%20Sant%C3%A9%20%26%20Naturel,%20je%20souhaite%20des%20informations%20ou%20commander%20Ail%20%26%20Thym" target="_blank" class="w-full bg-snGreen hover:bg-snLightGreen text-white text-center font-bold py-3 rounded-xl flex items-center justify-center space-x-2 transition">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span>Commander sur WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 13. VITOLIZE HOMMES -->
+                <div data-product-card data-search="vitolize hommes vitolize citrouille vitamines b6 c d e zinc homme vitalite energie testosterone" class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 flex flex-col hover:shadow-xl transition">
+                    <div class="p-4 bg-white flex justify-center items-center border-b border-gray-50">
+                        <img src="VITOLIZ HOMME.jpeg" alt="Vitolize Hommes" class="h-64 object-contain">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">VITOLIZE HOMMES</h3>
+                            <ul class="text-xs text-gray-600 space-y-1.5 list-disc list-inside">
+                                <li>Contribue au bien-être et à la vitalité masculine.</li>
+                                <li>Les vitamines B6 et C contribuent au métabolisme énergétique normal.</li>
+                                <li>Le zinc contribue au maintien d'un taux normal de testostérone dans le sang.</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/221772702493?text=Bonjour%20Sant%C3%A9%20%26%20Naturel,%20je%20souhaite%20des%20informations%20ou%20commander%20Vitolize%20Hommes" target="_blank" class="w-full bg-snGreen hover:bg-snLightGreen text-white text-center font-bold py-3 rounded-xl flex items-center justify-center space-x-2 transition">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span>Commander sur WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 14. SOINS & HYGIÈNE À L’ALOE -->
+                <div data-product-card data-search="soins hygiene aloe vera forever bright dentifrice haleine fraiche aloe first propolis creme ever shield deodorant peau routine quotidienne" class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 flex flex-col hover:shadow-xl transition">
+                    <div class="p-4 bg-white flex justify-center items-center border-b border-gray-50">
+                        <img src="soins-quotidiens-aloe-forever.jpeg" alt="Sélection Forever de soins et d’hygiène à l’aloe vera" class="h-64 w-full object-contain">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">SOINS &amp; HYGIÈNE À L’ALOE</h3>
+                            <ul class="text-xs text-gray-600 space-y-1.5 list-disc list-inside">
+                                <li>Forever Bright Toothgel aide à nettoyer les dents et laisse une sensation de fraîcheur mentholée.</li>
+                                <li>Aloe First et Aloe Propolis Creme complètent une routine de soin pour hydrater et apaiser la peau.</li>
+                                <li>Aloe Ever-Shield aide à contrôler les odeurs corporelles au quotidien.</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/221772702493?text=Bonjour%20Sant%C3%A9%20%26%20Naturel,%20je%20souhaite%20des%20informations%20sur%20les%20soins%20et%20produits%20d%E2%80%99hygi%C3%A8ne%20%C3%A0%20l%E2%80%99aloe" target="_blank" class="w-full bg-snGreen hover:bg-snLightGreen text-white text-center font-bold py-3 rounded-xl flex items-center justify-center space-x-2 transition">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span>Commander sur WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 15. SÉLECTION PROTECTION & SOINS -->
+                <div data-product-card data-search="protection solaire aloe sunscreen spf 30 aloe heat lotion aloe lips levres forever bright dentifrice hygiene dentaire ever shield deodorant fraicheur soleil soin quotidien" class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 flex flex-col hover:shadow-xl transition">
+                    <div class="p-4 bg-white flex justify-center items-center border-b border-gray-50">
+                        <img src="selection-protection-soins-forever.jpeg" alt="Sélection Forever avec protection solaire, soins des lèvres, dentifrice et déodorant à l’aloe" class="h-64 w-full object-contain">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">SÉLECTION PROTECTION &amp; SOINS</h3>
+                            <ul class="text-xs text-gray-600 space-y-1.5 list-disc list-inside">
+                                <li>Aloe Sunscreen SPF 30 aide à protéger la peau exposée au soleil.</li>
+                                <li>Aloe Lips aide à garder les lèvres douces, tandis qu’Aloe Heat Lotion accompagne le massage.</li>
+                                <li>Forever Bright favorise l’hygiène bucco-dentaire et Aloe Ever-Shield aide à contrôler les odeurs corporelles.</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/221772702493?text=Bonjour%20Sant%C3%A9%20%26%20Naturel,%20je%20souhaite%20des%20informations%20sur%20la%20s%C3%A9lection%20protection%20et%20soins" target="_blank" class="w-full bg-snGreen hover:bg-snLightGreen text-white text-center font-bold py-3 rounded-xl flex items-center justify-center space-x-2 transition">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span>Demander la sélection sur WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 16. SÉLECTION NUTRITION & SOINS -->
+                <div data-product-card data-search="absorbent c vitamine c arctic sea omega 3 forever kids aloe vera gelly propolis creme heat lotion ever shield bright toothgel aloe jojoba shampoo hygiene cheveux peau nutrition bien etre quotidien" class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 flex flex-col hover:shadow-xl transition">
+                    <div class="p-4 bg-white flex justify-center items-center border-b border-gray-50">
+                        <img src="selection-nutrition-soins-forever.jpeg" alt="Sélection Forever de nutrition, soins à l’aloe vera et hygiène" class="h-64 w-full object-contain">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">SÉLECTION NUTRITION &amp; SOINS</h3>
+                            <ul class="text-xs text-gray-600 space-y-1.5 list-disc list-inside">
+                                <li>Absorbent-C apporte de la vitamine C, qui contribue au fonctionnement normal du système immunitaire ; Arctic Sea apporte des acides gras oméga-3.</li>
+                                <li>Aloe Vera Gelly et Aloe Propolis Creme complètent les soins quotidiens de la peau.</li>
+                                <li>La sélection inclut aussi des produits d’hygiène bucco-dentaire, corporelle et capillaire à l’aloe vera.</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/221772702493?text=Bonjour%20Sant%C3%A9%20%26%20Naturel,%20je%20souhaite%20des%20informations%20sur%20la%20s%C3%A9lection%20nutrition%20et%20soins" target="_blank" class="w-full bg-snGreen hover:bg-snLightGreen text-white text-center font-bold py-3 rounded-xl flex items-center justify-center space-x-2 transition">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span>Demander la sélection sur WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="apropos" class="anchor-section border-y border-sky-100 bg-white px-4 py-16 sm:px-6 lg:py-20">
+        <div class="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-center">
+            <div class="ice-hero rounded-[2rem] p-8 sm:p-10">
+                <p class="text-sm font-semibold uppercase tracking-[0.16em] text-snGreen">À propos</p>
+                <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900">Santé & Naturel, votre boutique bien-être à Dakar</h2>
+                <p class="mt-4 leading-7 text-slate-600">Youssou Mbow vous accompagne dans la découverte de la sélection Forever Living et vous accueille à la Médina.</p>
+                <a href="contact.html" class="mt-7 inline-flex items-center gap-2 rounded-full bg-snGreen px-6 py-3 font-semibold text-white transition hover:bg-snLightGreen">Parler avec Youssou <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="grid gap-4 sm:grid-cols-2">
+                <div class="rounded-2xl border border-sky-100 bg-sky-50 p-6">
+                    <i class="fas fa-store text-xl text-snGreen"></i>
+                    <h3 class="mt-4 font-bold text-slate-900">Une sélection dédiée</h3>
+                    <p class="mt-2 text-sm leading-6 text-slate-600">Produits Forever Living pour le bien-être, la nutrition et les soins.</p>
+                </div>
+                <div class="rounded-2xl border border-sky-100 bg-cyan-50 p-6">
+                    <i class="fas fa-comments text-xl text-snGreen"></i>
+                    <h3 class="mt-4 font-bold text-slate-900">Un contact direct</h3>
+                    <p class="mt-2 text-sm leading-6 text-slate-600">Échangez avec la boutique et passez commande par WhatsApp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer data-site-footer></footer>
+
+    <script>
+        const productSearch = document.getElementById('product-search');
+        const stockFilter = document.getElementById('stock-filter');
+        const productCards = Array.from(document.querySelectorAll('[data-product-card]'));
+        const searchResults = document.getElementById('search-results');
+        const stockDataStatus = document.getElementById('stock-data-status');
+        const normalizeSearchText = (value) => value
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .toLocaleLowerCase('fr')
+            .trim();
+        const normalizeProductId = (name) => normalizeSearchText(name).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+        const productStockCards = productCards.map((card) => {
+            const productName = card.querySelector('h3').textContent.trim();
+            const productId = normalizeProductId(productName);
+            const orderLink = card.querySelector('a[href*="wa.me"]');
+            const status = document.createElement('span');
+            status.className = 'mb-3 inline-flex rounded-full bg-gray-100 px-3 py-1 text-xs font-semibold text-gray-700';
+            status.dataset.stockStatus = '';
+            status.textContent = 'Indisponible';
+            status.setAttribute('aria-label', 'Stock indisponible');
+            orderLink.before(status);
+            orderLink.removeAttribute('href');
+            orderLink.removeAttribute('target');
+            orderLink.setAttribute('aria-disabled', 'true');
+            orderLink.tabIndex = -1;
+            orderLink.classList.add('pointer-events-none', 'opacity-50');
+            orderLink.querySelector('span').textContent = 'Indisponible';
+            return { card, productId, productName, status, orderLink };
+        });
+
+        const productAvailability = new Map();
+
+        const renderProductStock = ({ status, orderLink, productName }, available) => {
+            status.textContent = available ? 'Disponible' : 'Indisponible';
+            status.className = available
+                ? 'mb-3 inline-flex rounded-full bg-cyan-100 px-3 py-1 text-xs font-semibold text-cyan-900'
+                : 'mb-3 inline-flex rounded-full bg-gray-100 px-3 py-1 text-xs font-semibold text-gray-700';
+            status.setAttribute('aria-label', `Stock ${available ? 'disponible' : 'indisponible'}`);
+            orderLink.querySelector('span').textContent = available ? 'Commander sur WhatsApp' : 'Indisponible';
+            if (available) {
+                const message = `Bonjour Santé & Naturel, je souhaite commander ${productName}.`;
+                orderLink.href = `https://wa.me/221772702493?text=${encodeURIComponent(message)}`;
+                orderLink.target = '_blank';
+                orderLink.rel = 'noopener noreferrer';
+                orderLink.removeAttribute('aria-disabled');
+                orderLink.removeAttribute('tabindex');
+                orderLink.classList.remove('pointer-events-none', 'opacity-50');
+            } else {
+                orderLink.removeAttribute('href');
+                orderLink.removeAttribute('target');
+                orderLink.removeAttribute('rel');
+                orderLink.setAttribute('aria-disabled', 'true');
+                orderLink.tabIndex = -1;
+                orderLink.classList.add('pointer-events-none', 'opacity-50');
+            }
+        };
+
+        const filterProducts = () => {
+            const query = normalizeSearchText(productSearch.value);
+            const availability = stockFilter.value;
+            let visibleCount = 0;
+
+            productStockCards.forEach(({ card, productId }) => {
+                const isAvailable = productAvailability.get(productId) === true;
+                const matchesSearch = normalizeSearchText(card.dataset.search).includes(query);
+                const matchesAvailability = availability === 'all'
+                    || (availability === 'available' && isAvailable)
+                    || (availability === 'unavailable' && !isAvailable);
+                const matches = matchesSearch && matchesAvailability;
+                card.classList.toggle('hidden', !matches);
+                if (matches) visibleCount += 1;
+            });
+
+            if (visibleCount === 0) {
+                searchResults.textContent = 'Aucun produit trouvé avec ces critères.';
+            } else {
+                searchResults.textContent = `${visibleCount} produit${visibleCount > 1 ? 's' : ''} affiché${visibleCount > 1 ? 's' : ''}.`;
+            }
+        };
+
+        productSearch.addEventListener('input', filterProducts);
+        stockFilter.addEventListener('change', filterProducts);
+        filterProducts();
+
+        const loadProductAvailability = async () => {
+            try {
+                const response = await fetch('produits.json', { cache: 'no-store' });
+                if (!response.ok) {
+                    throw new Error(`Chargement de produits.json impossible (${response.status}).`);
+                }
+                const products = await response.json();
+                if (!Array.isArray(products) || products.some((product) =>
+                    !product || typeof product.id !== 'string' || typeof product.nom !== 'string'
+                    || typeof product.disponible !== 'boolean')) {
+                    throw new Error('Le format de produits.json est invalide.');
+                }
+
+                const availability = new Map(products.map((product) => [product.id, product.disponible]));
+                const missingProduct = productStockCards.find(({ productId }) => !availability.has(productId));
+                if (missingProduct) {
+                    throw new Error(`Disponibilité absente pour ${missingProduct.productName}.`);
+                }
+
+                productAvailability.clear();
+                availability.forEach((available, id) => productAvailability.set(id, available));
+                productStockCards.forEach((product) => {
+                    renderProductStock(product, productAvailability.get(product.productId));
+                });
+                stockDataStatus.textContent = '';
+            } catch (error) {
+                console.error('Impossible de charger la disponibilité des produits.', error);
+                stockDataStatus.textContent = 'Impossible de charger les disponibilités. Réessayez plus tard.';
+                stockDataStatus.classList.add('text-red-700');
+                productStockCards.forEach((product) => renderProductStock(product, false));
+            }
+            filterProducts();
+        };
+
+        loadProductAvailability();
+    </script>
+</body>
+</html>

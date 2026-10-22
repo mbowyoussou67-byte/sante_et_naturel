@@ -1,0 +1,27 @@
+{
+  "id": "./",
+  "name": "Santé & Naturel",
+  "short_name": "Santé & Naturel",
+  "description": "La boutique Santé & Naturel de Youssou Mbow à Dakar.",
+  "lang": "fr-FR",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f2faff",
+  "theme_color": "#087e9b",
+  "categories": ["shopping", "health", "lifestyle"],
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
